@@ -6,7 +6,8 @@ const listaDeTeclas = document.querySelectorAll(".tecla");
 for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     const tecla = listaDeTeclas[contador];
     const efeito = tecla.classList[1];
-    const idAudio = function(){
+    const idAudio = '#som_${efeito}';
+    tecla.oneclick = function() {
         tocaSom(idAudio);
-    }
+    };
 }
